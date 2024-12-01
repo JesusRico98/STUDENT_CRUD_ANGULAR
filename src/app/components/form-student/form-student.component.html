@@ -1,0 +1,61 @@
+<div class="form-container">
+  <div class="header-container">
+    <h2 class="form-title">
+      @if(student){
+        Editar
+      }@else {
+        Nuevo
+      } Estudiante
+    </h2>
+  </div>
+
+  @if(form){
+  <form class="custom-form" [formGroup]="form" (ngSubmit)="Save()">
+    <!-- Campo Nombre -->
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Ingresa el nombre"
+        required
+        formControlName="name"
+      />
+    </div>
+
+    <!-- Campo Apellido -->
+    <div class="form-group">
+      <label for="lastname">Apellido</label>
+      <input
+        type="text"
+        id="lastname"
+        placeholder="Ingresa el apellido"
+        required
+        formControlName="lastname"
+      />
+    </div>
+
+    <!-- Campo Teléfono -->
+    <div class="form-group">
+      <label for="phone">Teléfono</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Ingresa el teléfono"
+        required
+        formControlName="phone"
+      />
+    </div>
+
+    <!-- Botón Enviar -->
+    <button type="submit" class="submit-btn">
+      @if(student){
+        Actualizar
+      }@else {
+        Crear
+      } Estudiante
+    </button>
+    <button class="back-btn" type="button" routerLink="/">cancelar</button>
+  </form>
+  }
+</div>

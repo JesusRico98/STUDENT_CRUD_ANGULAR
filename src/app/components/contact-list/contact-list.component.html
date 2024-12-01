@@ -1,0 +1,43 @@
+<div class="header-container">
+  <h2 class="table-title">Registro de Alumnos</h2>
+  <button class="new-student-btn" routerLink="/new">
+    Nuevo Estudiante
+  </button>
+</div>
+
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>TELEFONO</th>
+        <th>ACCIÓN</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(item of data; track item.id){
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.lastname}}</td>
+                <td>{{item.phone}}</td>
+
+                <td>
+                  <button class="edit-btn" [routerLink]="[item.id+'/edit']">Editar</button>
+                  <button class="delete-btn" (click)="deleteStudent(item)">
+                    Eliminar
+                  </button>
+                </td>
+        
+            </tr>
+        }
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

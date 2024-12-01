@@ -1,0 +1,170 @@
+/* Contenedor principal */
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    padding: 20px;
+  }
+  
+  /* Contenedor del encabezado */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Botón "Nuevo Estudiante" */
+.new-student-btn {
+  background: linear-gradient(90deg, #42e695, #3bb2b8);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-student-btn:hover {
+  background: linear-gradient(90deg, #3bb2b8, #42e695);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+  /* Título */
+  .table-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* Tabla */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Encabezado */
+  .custom-table thead {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+   
+  }
+  
+  .custom-table th {
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Celdas */
+  .custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Filas alternas */
+  .custom-table tr:nth-child(even) {
+    background-color: #f3f4f6;
+  }
+  
+  /* Efecto hover en filas */
+  .custom-table tr:hover {
+    background: linear-gradient(90deg, #e0f7fa, #80deea);
+    color: #000;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+  }
+  
+  /* Botón de acción */
+  .action-btn {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Botón de edición */
+.edit-btn {
+  background: linear-gradient(90deg, #42e695, #3bb2b8);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #3bb2b8, #42e695);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de eliminación */
+.delete-btn {
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #f9d423, #ff4e50);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste de botones en las filas */
+td button {
+  display: inline-block;
+}
+
+  
+  /* Ajustes de tabla para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .custom-table {
+      font-size: 14px;
+    }
+  
+    .action-btn {
+      padding: 8px 15px;
+      font-size: 12px;
+    }
+  }
+  
